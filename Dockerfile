@@ -7,9 +7,9 @@ RUN yum install -y epel-release && yum clean all
 
 RUN yum install -y nginx && yum clean all
 
-RUN mkdir /usr/share/nginx/html/blog/
+RUN rm -r /usr/share/nginx/html/*
 
-COPY blog /usr/share/nginx/html/blog
+COPY blog /usr/share/nginx/html
 
 EXPOSE 80
 
